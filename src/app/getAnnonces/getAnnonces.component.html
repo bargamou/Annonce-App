@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+    <mat-card-header>
+    <mat-card-title class="mat-card-title">Liste des utilisateurs</mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="width: 100%;">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>content</td>
+                    <td>video concerné</td>
+                    <td colspan="2">Actions</td>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let annonce of annonces">
+                        <td>{{ annonce.content }}</td>
+                        <td>{{ annonce.video }}</td>
+                        <td><a (click)="deleteAnnonce(annonce._id)" class="btn btn-danger">Supprimer</a></td>
+                    </tr>
+                </tbody>
+                </table>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button style="display: block; margin:0 auto;" (click)="goToAdmin()">Quitter</button>
+      </mat-card-actions> 
+</mat-card> 
+
+
